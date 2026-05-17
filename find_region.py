@@ -24,5 +24,5 @@ top = min(y1, y2)
 width = abs(x2 - x1)
 height = abs(y2 - y1)
 
-print(f"\nSet this in screenshot_clicker.py:")
-print(f"  REGION = ({left}, {top}, {width}, {height})")
+print(f"\nRun this to set your capture region:")
+print(f"  export SCREEN_REGION=\"{left},{top},{width},{height}\"")

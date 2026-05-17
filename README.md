@@ -25,7 +25,7 @@ Creates a `.venv` and installs dependencies.
 make region
 ```
 
-Press Enter, then move your mouse to the **upper-left** corner of the browser frame and wait. Repeat for the **lower-right** corner. Note the printed `REGION = (left, top, width, height)` values.
+Press Enter, then move your mouse to the **upper-left** corner of the browser frame and wait. Repeat for the **lower-right** corner. The script will print an `export SCREEN_REGION=...` command — run it to set your capture region.
 
 ### 2. Configure the capture
 
