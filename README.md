@@ -63,4 +63,4 @@ Switch to your browser within 3 seconds. The script will take a screenshot and p
 make pdf
 ```
 
-Combines all `slide_*.png` files from `~/Downloads/screens/` into `~/Downloads/EncoreSpring2026Program.pdf`, in order.
+Combines all `slide_*.png` files from `~/Downloads/screens/` into `~/Downloads/ProgramOutput.pdf`, in order.

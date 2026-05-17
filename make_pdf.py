@@ -6,7 +6,7 @@ import os
 import img2pdf
 
 files = sorted(glob.glob(os.path.expanduser("~/Downloads/screens/slide_*.png")))
-output = os.path.expanduser("~/Downloads/EncoreSpring2026Program.pdf")
+output = os.path.expanduser("~/Downloads/ProgramOutput.pdf")
 
 with open(output, "wb") as f:
     f.write(img2pdf.convert(files))
