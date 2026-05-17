@@ -1,16 +1,21 @@
 #!/usr/bin/env python3
 """Prompt the user to position their mouse at each corner of the capture region."""
 
+import time
 import pyautogui
 
+SETTLE_SECONDS = 3  # time after Enter to move mouse to target corner
+
 print("=== Region Finder ===")
-print("\nMove your mouse to the UPPER-LEFT corner of the region, then press Enter...")
+print(f"\nPress Enter, then move your mouse to the UPPER-LEFT corner ({SETTLE_SECONDS}s to position)...")
 input()
+time.sleep(SETTLE_SECONDS)
 x1, y1 = pyautogui.position()
 print(f"  Upper-left: ({x1}, {y1})")
 
-print("\nMove your mouse to the LOWER-RIGHT corner of the region, then press Enter...")
+print(f"\nPress Enter, then move your mouse to the LOWER-RIGHT corner ({SETTLE_SECONDS}s to position)...")
 input()
+time.sleep(SETTLE_SECONDS)
 x2, y2 = pyautogui.position()
 print(f"  Lower-right: ({x2}, {y2})")
 
