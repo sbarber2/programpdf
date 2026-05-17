@@ -25,20 +25,31 @@ Creates a `.venv` and installs dependencies.
 make region
 ```
 
-Press Enter, then move your mouse to the **upper-left** corner of the browser frame and wait. Repeat for the **lower-right** corner. Copy the printed `REGION = (...)` line into `screenshot_clicker.py`.
+Press Enter, then move your mouse to the **upper-left** corner of the browser frame and wait. Repeat for the **lower-right** corner. Note the printed `REGION = (left, top, width, height)` values.
 
 ### 2. Configure the capture
 
-Edit `screenshot_clicker.py` and set:
+Set the `SCREEN_REGION` environment variable to the four values from the previous step:
+
+```bash
+export SCREEN_REGION="left,top,width,height"
+```
+
+Or pass it inline when capturing (see step 3). You can also edit `screenshot_clicker.py` directly to adjust:
 
 | Variable | Description |
 |---|---|
-| `REGION` | Screen region to capture (from `make region`) |
 | `NUM_REPEATS` | Number of slides to capture |
 | `DELAY_BETWEEN_STEPS` | Seconds to wait between screenshot and keypress |
 | `DELAY_AFTER_CLICK` | Seconds to wait after keypress for slide to advance |
 
 ### 3. Capture screenshots
+
+```bash
+SCREEN_REGION="891,77,530,815" make capture
+```
+
+Or if you already exported `SCREEN_REGION`:
 
 ```bash
 make capture
