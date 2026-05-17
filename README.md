@@ -7,6 +7,7 @@ Automates capturing a series of screenshots of a browser-based slideshow and com
 - Python 3.x
 - macOS (uses `screencapture` under the hood)
 - Screen Recording permission granted to your terminal app (System Settings → Privacy & Security → Screen Recording)
+- Accessibility permission granted to your terminal app (System Settings → Privacy & Security → Accessibility)
 
 ## Setup
 
