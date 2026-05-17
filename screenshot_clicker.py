@@ -16,7 +16,11 @@ DELAY_BETWEEN_STEPS = 1.5  # Seconds to wait between screenshot and click
 DELAY_AFTER_CLICK = 2.0    # Seconds to wait after clicking (for page to advance)
 NUM_REPEATS = 42
 # Crop to browser window: (left, top, width, height) in pixels, or None for full screen
-REGION = (891, 77, 530, 815)
+REGION = None
+
+_env_region = os.environ.get("SCREEN_REGION")
+if _env_region:
+    REGION = tuple(int(v) for v in _env_region.split(","))
 # ---------------------
 
 os.makedirs(SAVE_DIR, exist_ok=True)
